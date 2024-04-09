@@ -21,22 +21,22 @@ public class Game extends PApplet {
     public void keyReleased(int keyCode) {
         switch (keyCode) {
             case UP:
-                System.out.println(player.move(Direction.UP));
+                player.move(Direction.UP);
                 break;
 
             case DOWN:
-                System.out.println(player.move(Direction.DOWN));
+                player.move(Direction.DOWN);
                 break;
 
             case LEFT:
-                System.out.println(player.move(Direction.LEFT));
+                player.move(Direction.LEFT);
                 break;
 
             case RIGHT:
-                System.out.println(player.move(Direction.RIGHT));
+                player.move(Direction.RIGHT);
                 break;
         }
-        System.out.println("GameState ID: " + player.getGameState().getStateID() + "-  Player Loc: " + player.getLoc());
-        System.out.println(player.getGameState());
+//        System.out.println("GameState ID: " + player.getGameState().getStateID() + "-  Player Loc: " + player.getGameState().getPlayerLoc());
+//        System.out.println(player.getGameState());
     }
 }

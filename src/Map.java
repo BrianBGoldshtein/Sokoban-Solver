@@ -10,12 +10,12 @@ public class Map {
     protected char[][] board;
     protected ArrayList<Location> goals;
     public Map(char[][] board) {
-        this.board = board;
+        this.board = board.clone();
         findGoals();
     }
 
     public Map(Map map) {
-        board = map.getBoard();
+        board = map.getBoard().clone();
         goals = map.getGoals();
     }
 
@@ -61,11 +61,10 @@ public class Map {
     }
 
     public Location findPlayer() {
-        System.out.println(this);
         for(int row = 0; row < board.length; row++) {
             for(int col = 0; col < board[row].length; col++) {
                 if(board[row][col] == '@') {
-                    System.out.println("Player located at " + row+ ", " + col);
+                    //System.out.println("Player located at " + row+ ", " + col);
                     return new Location(row,col);
                 }
             }
